@@ -1,0 +1,220 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 4052 >>
+stream
+0.96 0.98 1 rg 0 0 612 792 re f
+0.10 0.13 0.22 rg 0 760 612 32 re f
+BT /F2 9 Tf 54 771 Td (Backend Behind All This) Tj ET
+BT /F1 9 Tf 520 36 Td (Page 1) Tj ET
+BT /F2 22 Tf 54 734.0 Td (Backend Behind All This) Tj ET
+BT /F1 13 Tf 54 706.0 Td (IIEST Student-Teacher AI Portal) Tj ET
+BT /F1 10.5 Tf 54 686.0 Td (A simple technical explanation of how the IIEST Student-Teacher AI Portal works behind the scenes,) Tj ET
+BT /F1 10.5 Tf 54 673.0 Td (written so it can be explained to teachers, evaluators, or project reviewers.) Tj ET
+BT /F2 15 Tf 54 650.0 Td (Core Tech Used) Tj ET
+BT /F1 10.5 Tf 54 628.0 Td (- Frontend: Streamlit is used for the web interface. All pages like Teacher Portal, Live Exam,) Tj ET
+BT /F1 10.5 Tf 54 615.0 Td (BerriBot, Grading, Papers, Dashboard, and Learning Resources are Streamlit pages.) Tj ET
+BT /F1 10.5 Tf 54 599.0 Td (- Backend: FastAPI is used as the API server. The frontend sends requests to backend endpoints for) Tj ET
+BT /F1 10.5 Tf 54 586.0 Td (login, exam creation, AI tutoring, grading, question bank access, enrollments, results, and) Tj ET
+BT /F1 10.5 Tf 54 573.0 Td (analytics.) Tj ET
+BT /F1 10.5 Tf 54 557.0 Td (- Database: SQLite with SQLAlchemy stores users, exams, questions, student enrollments, teacher) Tj ET
+BT /F1 10.5 Tf 54 544.0 Td (subjects, results, assignments, and exam set allocations.) Tj ET
+BT /F1 10.5 Tf 54 528.0 Td (- Authentication: JWT token authentication is used. After login, the backend returns a token, and) Tj ET
+BT /F1 10.5 Tf 54 515.0 Td (protected pages/API calls use that token to verify whether the user is a student or teacher.) Tj ET
+BT /F1 10.5 Tf 54 499.0 Td (- AI: AI features go through a centralized /ai_tutor API. The system can use local AI through) Tj ET
+BT /F1 10.5 Tf 54 486.0 Td (Ollama/Llama if available, and fallback academic logic keeps the portal functional if the AI server) Tj ET
+BT /F1 10.5 Tf 54 473.0 Td (is unavailable.) Tj ET
+BT /F1 10.5 Tf 54 457.0 Td (- Voice: BerriBot uses the browser Web Speech APIs. SpeechRecognition listens to the student, and) Tj ET
+BT /F1 10.5 Tf 54 444.0 Td (SpeechSynthesis speaks the AI answer aloud.) Tj ET
+BT /F1 10.5 Tf 54 428.0 Td (- File Reading/OCR: Uploaded PDFs, DOCX, text files, CSV/Excel files, and images are passed through) Tj ET
+BT /F1 10.5 Tf 54 415.0 Td (extraction logic. Clear text documents are read directly; scanned or unclear handwritten files may) Tj ET
+BT /F1 10.5 Tf 54 402.0 Td (require teacher correction.) Tj ET
+BT /F2 15 Tf 54 381.0 Td (1. Login And Role Access) Tj ET
+BT /F1 10.5 Tf 54 359.0 Td (Students and teachers log in through the same portal. The backend checks credentials and sends back) Tj ET
+BT /F1 10.5 Tf 54 346.0 Td (a JWT token. The frontend stores this token and uses it whenever it calls a protected API.) Tj ET
+BT /F1 10.5 Tf 54 328.0 Td (Teachers can access teacher tools and student preview tools because they need to inspect the learner) Tj ET
+BT /F1 10.5 Tf 54 315.0 Td (experience. Students cannot access teacher-only pages.) Tj ET
+BT /F1 10.5 Tf 54 297.0 Td (If asked how it works: login -> backend verifies user -> backend returns token -> frontend stores) Tj ET
+BT /F1 10.5 Tf 54 284.0 Td (token -> every page and API checks the role before allowing access.) Tj ET
+BT /F2 15 Tf 54 261.0 Td (2. Subject Enrollment System) Tj ET
+BT /F1 10.5 Tf 54 239.0 Td (Students enroll themselves into subjects from the Student Dashboard by entering name, roll number,) Tj ET
+BT /F1 10.5 Tf 54 226.0 Td (semester, section, subject, and subject code.) Tj ET
+BT /F1 10.5 Tf 54 208.0 Td (Teachers enroll themselves for the subjects they teach from the Teacher Portal.) Tj ET
+BT /F1 10.5 Tf 54 190.0 Td (The backend matches teacher subject code, semester, and section with student enrollments. This lets) Tj ET
+BT /F1 10.5 Tf 54 177.0 Td (the teacher see the exact roster for each subject.) Tj ET
+BT /F1 10.5 Tf 54 159.0 Td (Why it matters: exams, analytics, attendance, grading, and remedial support become subject-wise) Tj ET
+BT /F1 10.5 Tf 54 146.0 Td (instead of random.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3726 >>
+stream
+0.96 0.98 1 rg 0 0 612 792 re f
+0.10 0.13 0.22 rg 0 760 612 32 re f
+BT /F2 9 Tf 54 771 Td (Backend Behind All This) Tj ET
+BT /F1 9 Tf 520 36 Td (Page 2) Tj ET
+BT /F2 15 Tf 54 734.0 Td (3. Teacher Portal) Tj ET
+BT /F1 10.5 Tf 54 712.0 Td (The Teacher Portal is the command center. It includes daily priorities, class capture, subject) Tj ET
+BT /F1 10.5 Tf 54 699.0 Td (roster, remedial cohorts, AI question studio, syllabus progression, and LMS-style tools.) Tj ET
+BT /F1 10.5 Tf 54 681.0 Td (AI helps teachers by identifying students needing attention, suggesting teacher actions, generating) Tj ET
+BT /F1 10.5 Tf 54 668.0 Td (tests from taught topics, preparing remedial groups, and supporting grading.) Tj ET
+BT /F1 10.5 Tf 54 650.0 Td (The standout idea is teacher intelligence: not just storing data, but helping the teacher decide) Tj ET
+BT /F1 10.5 Tf 54 637.0 Td (what to do next.) Tj ET
+BT /F2 15 Tf 54 614.0 Td (4. Class Capture) Tj ET
+BT /F1 10.5 Tf 54 592.0 Td (A teacher can record or type what was taught in class. The portal converts that lecture summary into) Tj ET
+BT /F1 10.5 Tf 54 579.0 Td (notes and a short concept-check test.) Tj ET
+BT /F1 10.5 Tf 54 561.0 Td (Flow: teacher selects subject and subject code -> starts capture or types summary -> AI summarizes) Tj ET
+BT /F1 10.5 Tf 54 548.0 Td (taught topics -> teacher creates an after-class check -> notes can be sent to enrolled students.) Tj ET
+BT /F1 10.5 Tf 54 530.0 Td (How to explain it: instead of preparing notes and tests separately after class, the teacher gives) Tj ET
+BT /F1 10.5 Tf 54 517.0 Td (the lecture content once, and the system turns it into usable student material.) Tj ET
+BT /F2 15 Tf 54 494.0 Td (5. Exam Builder) Tj ET
+BT /F1 10.5 Tf 54 472.0 Td (Teachers create exams by choosing subject, subject code, topics, question type, difficulty, number) Tj ET
+BT /F1 10.5 Tf 54 459.0 Td (of questions, number of sets, duration, and deadline.) Tj ET
+BT /F1 10.5 Tf 54 441.0 Td (The backend filters the structured question bank by subject, topic, difficulty, and question format.) Tj ET
+BT /F1 10.5 Tf 54 428.0 Td (It then builds Set A, Set B, Set C, etc. automatically.) Tj ET
+BT /F1 10.5 Tf 54 410.0 Td (The teacher does not manually write each question or assign each paper. The system creates balanced) Tj ET
+BT /F1 10.5 Tf 54 397.0 Td (sets from the question bank.) Tj ET
+BT /F2 15 Tf 54 374.0 Td (6. Question Bank) Tj ET
+BT /F1 10.5 Tf 54 352.0 Td (The question bank is structured for B.Tech CSE-style subjects and supports MCQs, short answers, long) Tj ET
+BT /F1 10.5 Tf 54 339.0 Td (answers, numerical/problem-solving questions, and coding-style questions where applicable.) Tj ET
+BT /F1 10.5 Tf 54 321.0 Td (Each question stores metadata such as subject, topic, difficulty, type, marks, options, correct) Tj ET
+BT /F1 10.5 Tf 54 308.0 Td (answer, keywords, and explanation.) Tj ET
+BT /F1 10.5 Tf 54 290.0 Td (This avoids the old placeholder problem where every MCQ looked like Correct Answer / Wrong Answer.) Tj ET
+BT /F1 10.5 Tf 54 277.0 Td (Questions are generated and selected based on subject and topic.) Tj ET
+BT /F2 15 Tf 54 254.0 Td (7. Live Exam) Tj ET
+BT /F1 10.5 Tf 54 232.0 Td (Students see teacher-created exams in the Live Exam page. Exams show subject, subject code,) Tj ET
+BT /F1 10.5 Tf 54 219.0 Td (duration, deadline, and status.) Tj ET
+BT /F1 10.5 Tf 54 201.0 Td (Flow: teacher creates exam -> backend saves exam/questions -> student opens Live Exam -> starts exam) Tj ET
+BT /F1 10.5 Tf 54 188.0 Td (-> browser timer runs -> student submits -> backend stores results.) Tj ET
+BT /F1 10.5 Tf 54 170.0 Td (MCQs can be auto-marked. Short/long/coding answers are stored for manual or AI-assisted evaluation.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3461 >>
+stream
+0.96 0.98 1 rg 0 0 612 792 re f
+0.10 0.13 0.22 rg 0 760 612 32 re f
+BT /F2 9 Tf 54 771 Td (Backend Behind All This) Tj ET
+BT /F1 9 Tf 520 36 Td (Page 3) Tj ET
+BT /F2 15 Tf 54 734.0 Td (8. Exam Set Assignment) Tj ET
+BT /F1 10.5 Tf 54 712.0 Td (When a teacher creates multiple sets, the portal automatically divides enrolled students) Tj ET
+BT /F1 10.5 Tf 54 699.0 Td (alphabetically and as evenly as possible across Set A, Set B, Set C, etc.) Tj ET
+BT /F1 10.5 Tf 54 681.0 Td (The backend stores which student received which set, so the teacher has a record later.) Tj ET
+BT /F1 10.5 Tf 54 663.0 Td (Why it matters: this supports realistic exams where different sets reduce copying but teachers still) Tj ET
+BT /F1 10.5 Tf 54 650.0 Td (need clear tracking.) Tj ET
+BT /F2 15 Tf 54 627.0 Td (9. AI Grading Center) Tj ET
+BT /F1 10.5 Tf 54 605.0 Td (Typed assignment grading allows the teacher to paste or type a student answer and a rubric. AI) Tj ET
+BT /F1 10.5 Tf 54 592.0 Td (evaluates concept coverage, keywords, missing points, and feedback.) Tj ET
+BT /F1 10.5 Tf 54 574.0 Td (Uploaded paper grading lets the teacher upload a PDF/DOC/image. The system extracts text where) Tj ET
+BT /F1 10.5 Tf 54 561.0 Td (possible. If handwriting is unclear, the teacher can correct the extracted text before grading.) Tj ET
+BT /F1 10.5 Tf 54 543.0 Td (This is realistic because OCR is not perfect for handwritten copies. The system supports AI grading,) Tj ET
+BT /F1 10.5 Tf 54 530.0 Td (but keeps the teacher in control.) Tj ET
+BT /F2 15 Tf 54 507.0 Td (10. Attendance Intelligence) Tj ET
+BT /F1 10.5 Tf 54 485.0 Td (Teachers can maintain attendance records and use AI to identify risk patterns.) Tj ET
+BT /F1 10.5 Tf 54 467.0 Td (AI does not just show percentage. It highlights low attendance, repeated absence, possible risk, and) Tj ET
+BT /F1 10.5 Tf 54 454.0 Td (suggested teacher action.) Tj ET
+BT /F1 10.5 Tf 54 436.0 Td (This makes attendance useful for intervention, not just record keeping.) Tj ET
+BT /F2 15 Tf 54 413.0 Td (11. Analytics Dashboard) Tj ET
+BT /F1 10.5 Tf 54 391.0 Td (The dashboard reads exam results, submissions, attendance, and subject data from the database.) Tj ET
+BT /F1 10.5 Tf 54 373.0 Td (AI helps interpret this data by identifying weak topics, students needing support, difficult) Tj ET
+BT /F1 10.5 Tf 54 360.0 Td (questions, and revision needs.) Tj ET
+BT /F1 10.5 Tf 54 342.0 Td (Teachers can use it to understand class progress and change records where required.) Tj ET
+BT /F2 15 Tf 54 319.0 Td (12. Remedial Cohorts) Tj ET
+BT /F1 10.5 Tf 54 297.0 Td (The system groups students who are weak in similar topics or subjects.) Tj ET
+BT /F1 10.5 Tf 54 279.0 Td (Example: students weak in DBMS normalization can be grouped separately from students weak in) Tj ET
+BT /F1 10.5 Tf 54 266.0 Td (operating system scheduling.) Tj ET
+BT /F1 10.5 Tf 54 248.0 Td (The AI checks results, weak-topic data, and performance signals to suggest groups, so teachers do) Tj ET
+BT /F1 10.5 Tf 54 235.0 Td (not manually inspect every paper.) Tj ET
+BT /F2 15 Tf 54 212.0 Td (13. Student Dashboard) Tj ET
+BT /F1 10.5 Tf 54 190.0 Td (Students can enroll in subjects, view exams, track results, access weak-subject revision, and use AI) Tj ET
+BT /F1 10.5 Tf 54 177.0 Td (study tools.) Tj ET
+BT /F1 10.5 Tf 54 159.0 Td (The dashboard is connected to the student login, subject enrollment, exam attempts, and result) Tj ET
+BT /F1 10.5 Tf 54 146.0 Td (records.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 3464 >>
+stream
+0.96 0.98 1 rg 0 0 612 792 re f
+0.10 0.13 0.22 rg 0 760 612 32 re f
+BT /F2 9 Tf 54 771 Td (Backend Behind All This) Tj ET
+BT /F1 9 Tf 520 36 Td (Page 4) Tj ET
+BT /F2 15 Tf 54 734.0 Td (14. BerriBot / TeachMeBerriBot) Tj ET
+BT /F1 10.5 Tf 54 712.0 Td (BerriBot is the AI voice study assistant for students.) Tj ET
+BT /F1 10.5 Tf 54 694.0 Td (Universal knowledge mode answers from general academic knowledge. Uploaded material first mode uses) Tj ET
+BT /F1 10.5 Tf 54 681.0 Td (the uploaded document first, then general knowledge. Uploaded material only mode answers only from) Tj ET
+BT /F1 10.5 Tf 54 668.0 Td (the uploaded document.) Tj ET
+BT /F1 10.5 Tf 54 650.0 Td (Voice flow: student clicks Listen -> browser records speech -> transcript goes to /ai_tutor ->) Tj ET
+BT /F1 10.5 Tf 54 637.0 Td (backend generates answer -> browser speaks the answer using speech synthesis.) Tj ET
+BT /F1 10.5 Tf 54 619.0 Td (Voice commands like pause, stop, resume, and continue are handled in the browser.) Tj ET
+BT /F1 10.5 Tf 54 601.0 Td (Why it stands out: students can learn through live spoken interaction instead of only typing into a) Tj ET
+BT /F1 10.5 Tf 54 588.0 Td (chatbot.) Tj ET
+BT /F2 15 Tf 54 565.0 Td (15. Papers Section) Tj ET
+BT /F1 10.5 Tf 54 543.0 Td (Students can upload previous year papers, PDFs, notes, and question papers.) Tj ET
+BT /F1 10.5 Tf 54 525.0 Td (The system extracts text and lets students ask AI to summarize, explain, or create a revision plan) Tj ET
+BT /F1 10.5 Tf 54 512.0 Td (from the uploaded paper.) Tj ET
+BT /F1 10.5 Tf 54 494.0 Td (Example use case: upload a DBMS question paper and ask for a chapter-wise revision plan.) Tj ET
+BT /F2 15 Tf 54 471.0 Td (16. Learning Resources) Tj ET
+BT /F1 10.5 Tf 54 449.0 Td (Students enter a topic and receive structured suggestions such as YouTube learning links, study) Tj ET
+BT /F1 10.5 Tf 54 436.0 Td (material ideas, articles, notes, PDFs, and reference resources.) Tj ET
+BT /F1 10.5 Tf 54 418.0 Td (The AI generates a guided learning path for deeper understanding.) Tj ET
+BT /F2 15 Tf 54 395.0 Td (17. Weak Subjects / Improvement Generator) Tj ET
+BT /F1 10.5 Tf 54 373.0 Td (Students select weak subjects or topics. The system creates a revision plan, daily practice) Tj ET
+BT /F1 10.5 Tf 54 360.0 Td (reminders, practice questions, and improvement strategy.) Tj ET
+BT /F1 10.5 Tf 54 342.0 Td (This feature connects self-assessment with AI-generated academic planning.) Tj ET
+BT /F2 15 Tf 54 319.0 Td (Best Way To Present The Project) Tj ET
+BT /F1 10.5 Tf 54 297.0 Td (Say this: This is not just an exam website. It is an AI-supported academic ERP/LMS for teachers and) Tj ET
+BT /F1 10.5 Tf 54 284.0 Td (students.) Tj ET
+BT /F1 10.5 Tf 54 266.0 Td (The teacher side reduces manual work like test creation, grading, attendance tracking, class) Tj ET
+BT /F1 10.5 Tf 54 253.0 Td (capture, remedial grouping, and syllabus planning.) Tj ET
+BT /F1 10.5 Tf 54 235.0 Td (The student side supports AI tutoring, voice learning, exam practice, weak-topic revision, paper) Tj ET
+BT /F1 10.5 Tf 54 222.0 Td (analysis, and personalized study support.) Tj ET
+BT /F1 10.5 Tf 54 204.0 Td (Technical summary: The frontend is Streamlit, the backend is FastAPI, the database is SQLite with) Tj ET
+BT /F1 10.5 Tf 54 191.0 Td (SQLAlchemy, authentication uses JWT, and AI features go through the /ai_tutor API. Voice uses) Tj ET
+BT /F1 10.5 Tf 54 178.0 Td (browser speech recognition and speech synthesis.) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000211 00000 n 
+0000000286 00000 n 
+0000004390 00000 n 
+0000004526 00000 n 
+0000008304 00000 n 
+0000008440 00000 n 
+0000011953 00000 n 
+0000012090 00000 n 
+0000015607 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+15745
+%%EOF

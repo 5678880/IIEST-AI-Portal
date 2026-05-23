@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.venv-mac/
+*.log
+.streamlit/secrets.toml
+final_deck_images/
+final_deck_v2_images/
+final_original_style_images/
+old_deck_extracted/
+original_finall_extract/
+presentation_design_options/
+presentation_screenshots/
+*.zip

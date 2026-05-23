@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: iiest-student-teacher-ai-portal
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash deploy/start.sh
+    envVars:
+      - key: API_BASE_URL
+        value: http://127.0.0.1:8001

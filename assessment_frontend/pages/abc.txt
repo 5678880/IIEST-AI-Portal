@@ -1,0 +1,91 @@
+assessment_frontend/
+│
+├── app.py
+├── requirements.txt
+│
+├── pages/
+│   ├── dashboard.py
+│   ├── exam.py
+│   ├── results.py
+│   └── analytics.py
+│
+├── components/
+│   ├── sidebar.py
+│   ├── timer.py
+│   └── question_card.py
+│
+└── data/
+    └── sample_questions.py
+
+
+STEP 2 — JWT AUTHENTICATION
+
+Right now:
+
+fake/simple login
+
+Build:
+✅ JWT tokens
+✅ secure auth
+✅ password hashing
+✅ role protection
+
+Very important for real deployment.
+
+STEP 3 — REAL TEACHER WORKFLOW
+
+Teachers should:
+✅ generate questions
+✅ edit questions
+✅ save question sets
+✅ create exams
+✅ assign exams
+
+This becomes:
+
+assessment authoring system
+STEP 4 — EXAM MANAGEMENT
+
+Build:
+✅ exam creation
+✅ exam scheduling
+✅ duration
+✅ exam start/end logic
+✅ student assignment
+
+Now it becomes:
+
+institution-grade
+STEP 5 — TIMER + AUTO SUBMIT
+
+Your current timer is frontend-only.
+
+Real systems require:
+✅ backend-controlled timer
+✅ auto submit
+✅ time sync
+
+Very important.
+
+STEP 6 — AI PROCTORING
+
+(Later Phase)
+
+This becomes:
+✅ webcam monitoring
+✅ tab switch detection
+✅ face detection
+✅ audio monitoring
+✅ incident timeline
+
+This is advanced Phase 2/3.
+
+STEP 7 — ANALYTICS + PSYCHOMETRICS
+
+Build:
+✅ item difficulty analysis
+✅ distractor analysis
+✅ cohort performance
+✅ learning outcome mapping
+
+This is what makes enterprise buyers interested.
